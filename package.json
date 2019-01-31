@@ -1,5 +1,27 @@
 {
   "name": "my_seventh_level",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+  "engines": {
+    "node": "8.9.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack --mode=production",
+    "start": "webpack --watch --mode=development"
+  }
 }
