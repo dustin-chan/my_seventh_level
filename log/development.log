@@ -97,3 +97,36 @@ Migrating to CreateUsers (20190131192035)
   [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:12
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2019-01-31 16:11:58 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/keith_/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPageController:
+
+Started POST "/__better_errors/3e24f06e46b404c1/variables" for 127.0.0.1 at 2019-01-31 16:11:59 -0500
+Started GET "/" for 127.0.0.1 at 2019-01-31 16:13:04 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/keith_/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  Rendered static_page/root.html.erb within layouts/application (306.6ms)
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `logged_in?' for #<#<Class:0x00007ff2b0395328>:0x00007ff2af13ad68>
+Did you mean?  logger?:
+  app/views/static_page/root.html.erb:1:in `_app_views_static_page_root_html_erb___3701966895441031888_70340147966980'
+
+Started POST "/__better_errors/7967350a2468f6b9/variables" for 127.0.0.1 at 2019-01-31 16:13:05 -0500
+Started GET "/" for 127.0.0.1 at 2019-01-31 16:14:10 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/keith_/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 2890ms (Views: 2869.9ms | ActiveRecord: 6.5ms)
+
+
